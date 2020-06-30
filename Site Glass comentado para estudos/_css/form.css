@@ -1,0 +1,44 @@
+@charset "utf-8";
+input#cEnviar{
+    outline: 0;/*some com a borda do botão*/
+}
+
+form{
+    width: 500px;/*largura do formulário*/
+    margin: auto;/*centralização do formulário*/
+}
+input,textarea{/*formatação de inputs e textarea*/
+    font-family: sans-serif;/*formato da letra*/
+    font-weight: normal;/*deixa a letra transparante  menos forte*/
+    font-size: 13pt;/*tamanho da letra*/
+    background-color: rgba(255, 255, 255,.8);/*tonalidade nas bordas*/
+}
+input:hover, textarea:hover{/*quando passar o mouse no input e textarea*/
+    background-color: #dddddd;/*muda cor de fundo*/
+}
+legend{/*formatação das legendas dos fieldset*/
+    color: #888888;
+    font-weight: bold;/*tonalidade mais forte de negrito*/
+    font-size: 13pt;/*tamanho da letra*/
+    font-family: sans-serif;/*formato da letra*/
+}
+fieldset{/*formatação de todos os fieldsets*/
+    border-color: #cecece;/*muda cor da borda de todo formulario*/
+    margin: 20px;/*espaçamento externo aumentado, distancia dos quadrados*/
+}
+fieldset#sexo{/*formatação do pequeno fieldset "caixa"*/
+    width: 150px;/*largura*/    
+}
+/*Inserção de imagens em cada fieldset*/
+fieldset#usuario{
+    background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+fieldset#endereco{
+    background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+fieldset#mensagem{
+    background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+fieldset#pedido{
+    background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}

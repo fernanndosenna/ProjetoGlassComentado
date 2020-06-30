@@ -1,0 +1,108 @@
+ul#album-fotos li{/*formatação de cada li*/
+    float: left;/*flutuar para o lado de lá > mantendo em linha*/
+    width: 200px;/*aumenta a largura dos li, ou seja a distancia entre eles*/
+    height: 200px;/*aumenta a distancia da altura de um para o outro, dando espaço*/
+    margin: 10px;/*aumenta o espaçmento externo, dando distancia também*/
+    border: 5px solid #ffffff;/*Coloca borda em cada li, fazendo um quadrado*/
+    background-color: #ffffff;/*cor de fundo dos quadrados dos li*/
+    box-shadow: 1px 1px 3px rgba(0, 0, 0,.4);/*sombreamento dos quadrados*/
+    transition: all .4s ease-in;/*faz com o que o destaque do transform seja lento*/
+}
+
+ul#album-fotos{/*formatação de todo conteúdo da galeria*/
+    width: 700px;/*aumenta a largura do conteudo da galera*/
+    margin: 0 auto;/*centralizando o conteudo de quadrados na pagina*/
+    padding: 50px;/*aumenta o espaço de todos os lados dos quadrados*/
+    list-style: none;/*some com os pontinhos dos li*/
+    overflow: hidden;/*oculta, nesse caso aumenta o espaçamento inferior*/
+}
+ul#album-fotos li span{/*formatação das legendas com tag span*/
+    opacity: 0;/*faz sumir as legendas dos quadrados*/
+    text-shadow: 1px 1px 1px #000000;/*sombreamento de texto*/
+    color: #ffffff;/*cor da letra da legenda*/
+    background-color: rgba(0, 0, 0,.3);/*cor de fundo*/
+    font-size: 9pt;/*tamanho da letra*/
+    line-height: 370px;/*aumentando espaçamento superior das legendas, fazendo colar embaixo*/
+    padding: 5px;/*aumenta o espaçamento interno, crescendo a borda*/
+}
+ul#album-fotos li:hover{
+    transform: scale(1.5);/*faz efeito de destaque nos quadrados*/
+}
+ul#album-fotos li:hover span{
+    opacity: 1;/*quando passar o mouse por cima, faz aparecer a legenda dnv*/
+}
+
+/*---------------------------------------------------------------*/
+ul#album-fotos li#foto01{
+    background: url("../_imagens/galeria-01.jpg");
+    background-position: 50% 50%;/*faz com que o foco da imagem vá para o centro*/
+    background-size: 400px 400px;/*a imagem tem 500 de tamanho, isso reduz para 400*/
+    background-color: #ffffff;/*cor de fundo*/
+}
+ul#album-fotos li#foto01:hover{
+    background-position: 0px 0px;/*faz com que o foco da imagem volte para o foco original*/
+    background-size: 200px 200px;/*reduz o tamanho da imagem ainda ao passar o mouse*/
+}
+/*=========================================*/
+ul#album-fotos li#foto02{
+    background: url("../_imagens/galeria-02.jpg");
+    background-position: 50% 50%;/*faz com o que o foco da imagem vá para o centro*/
+    background-size: 400px 400px;/*a imagem tendo 500 de tamanho, isso reduz para 400*/
+    
+}
+ul#album-fotos li#foto02:hover{
+    background-position: 0px 0px;/* faz com o que o foca da imagem volte para o foco original*/
+    background-size: 200px 200px;/*diminui o tamanho da imagem ao passar o mouse*/
+}
+/*=========================================*/
+ul#album-fotos li#foto03{
+    background: url("../_imagens/galeria-03.jpg");
+    background-position: 50% 50%;/*foca na parte central da imagem*/
+    background-size: 400px 400px;/*diminui o tamanho da imagem de 500 para 400*/
+}
+ul#album-fotos li#foto03:hover{
+    background-position: 0px 0px;/*volta o foco original da imagem*/
+    background-size: 200px 200px;/*reduz ainda mais a imagem, ao passar o mouse por cima*/
+}
+/*===========================================*/
+ul#album-fotos li#foto04{
+    background: url("../_imagens/galeria-04.jpg");
+    background-position: 50% 50%;/* foca na parte central da imagem*/
+    background-size: 400px 400px;/*reduz tamanho original da imagem de 500 para 400*/
+}
+ul#album-fotos li#foto04:hover{
+    background-position: 0px 0px;/*volta o foco original da imagem*/
+    background-size: 200px 200px;/*reduz ainda mais a imagem ao passar o mouse por cima*/
+}
+/*============================================*/
+ul#album-fotos li#foto05{
+    background: url("../_imagens/galeria-05.jpg");
+    background-position: 50% 50%;/*foca na parte central da imagem*/
+    background-size: 400px 400px;/*reduz tamanho original da imagem de 500 para 400*/
+}
+ul#album-fotos li#foto05:hover{
+    background-position: 0px 0px;/*volta o foco original da imagem*/
+    background-size: 200px 200px;/*reduz ainda mais a imagem ao passar o mouse por cima*/
+}
+/*============================================*/
+ul#album-fotos li#foto06{
+    background: url("../_imagens/galeria-06.jpg");
+    background-position: 50% 50%;/*foca na parte central da imagem*/
+    background-size: 400px 400px;/*reduz o tamanho original da imagem de 500 para 400*/
+}
+ul#album-fotos li#foto06:hover{
+    background-position: 0px 0px;/*volta o foco original da imagem*/
+    background-size: 200px 200px;/*reduz ainda mais a imagem ao passar o mouse por cima*/
+}
+
+
+
+
+
+
+
+
+
+
+
+

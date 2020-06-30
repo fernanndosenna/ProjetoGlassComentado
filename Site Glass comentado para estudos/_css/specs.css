@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*formatação do arquivo iframe externo*/
+iframe#frame-spec{
+    width: 400px;/*largura do arquivo iframe externo*/
+    height: 280px;/*altura do arquivo iframe externo*/
+    border: none;/*tirando a borda do arquivo iframe externo*/
+}
+/*formatação da seção, ou seja, o conteudo da pagina*/
+section#conteudo{
+width: 1000px; /*largura do conteudo*/
+ margin: auto;   /*margin auto, de acordo com tamanho do conteudo*/
+}
+area{/*tira a borda de linha ao clickar nas áreas mapeadas*/
+    outline: 0;
+}

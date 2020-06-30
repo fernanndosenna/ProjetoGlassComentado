@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap'); /*Importando fonte da web*/
+@font-face{
+    font-family: "FonteLogo";
+    src: url("../_fonts/bubblegum-sans-regular.otf");/*Importe do pc*/
+}
+
+/*Formatação do corpo (body)*/
+body{
+    font-family: Arial, Helvetica, sans-serif;/*Formato da letra*/
+    background-color: #cecece;/*Cor de fundo da página*/
+    color: rgba(0, 0, 0,1);/*Color, cor da letra com valo rgbar*/
+}
+
+/*Formatação divisória da interface, área central da página*/
+div#interface{
+    background-color: #ffffff;/*cor de fundo da interface*/
+    width: 900px; /*largura da interface*/
+    margin: -20px auto 0px auto; /*centralização da interface*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,1);/*sombra na borda interface*/
+    padding: 10px;/*espaço interno para aumentar o tamanho da interface*/
+}
+
+/*Formatação de todos os parágrafos da página*/
+p{
+    text-align: justify;/*text-align- alinhar texto justificado*/
+    text-indent: 50px;/*text-indent- indentar os paragrafos com espaçament*/
+}
+
+/*Formatação dos links dos textos*/
+a{
+    color: #606060;/*cor dos links a href*/
+    text-decoration: none;/*tira linha sublinhada dos links*/
+}
+a:hover{     /*hover, quando passar o mouse por cima, causa efeito mudança*/
+    text-decoration: underline;/*Sublinhando todos os links*/
+}
+
+/*Formatação do Menu da página superior*/
+nav#menu{ 
+    display: block;/*transformar menu em bloco, pré-requisito de flutuar*/
+}
+nav#menu ul{ /*todo os li do menu*/
+    list-style: none;/*Sumir com as bolinhas laterais dos li*/
+    text-transform: uppercase;/*deixar todos os li em maiúsculo*/
+    position: absolute;/*Menu flutuando por cima, e "livre" na página*/
+    top: -20px; /*subir o menu para parte superior da página*/
+    left: 470px; /*mover para o canto da página, esquerda.*/
+}
+nav#menu li{ /*cada celula da lista não ordenada*/
+    background: #dddddd;
+    display: inline-block;
+    border-radius: 25px;/*Formato de borda em cada li*/
+    border-style: groove;/*Estilo da borda dos li*/
+    padding: 10px;/*Aumento espaço interno dos li*/
+    margin: 1px;/*Aumento espaço externo dos li*/
+    transition: background-color 1s;/*vai demorar 1s para mudar cor fundo*/
+    transition: all .2s ease-in; /*vai demorar 2s para destacar o menu*/
+}
+nav#menu li:hover{ /*Efeito, passar mouse por cima dos li*/
+    background-color: #606060;/*Mudar a cor de fundos dos li*/
+    transform: scale(1.5);/*Efeito para destacar os li quando passar mouse*/
+}
+nav#menu h1{
+    display: none;/*some com o titulo do menu*/
+}
+nav#menu a{
+    color: #000000;/*cor das letras de cada href ou <a></a> (âncora)*/
+    text-decoration: none;/*some com os sublinhados de cada href*/
+}
+nav#menu a:hover{/*efeito de mudança*/
+    color: #ffffff;/*Muda a cor dos href para branco, ao passar o mouse.*/
+    text-decoration: underline;/*volta o sublinhado ao passar o mouse*/
+}
+
+/*Formatação do cabecalho*/
+header#cabecalho{ 
+    border-bottom: 1px #606060 solid; /*linha reta de borda no cabecalho*/
+    height: 150px; /*ajusta altura da linha*/
+    background:url("../_imagens/glass-logo-peq.jpg") no-repeat 0 80px;
+}
+header#cabecalho img#icone{
+    position: absolute;/*deixa a imagem do oculos solto na página flutuand*/
+    left: 980px;/*movendo a imagem para a esquerda página, no canto*/
+    top: 65px;
+}
+header#cabecalho h1{
+    font-family: FonteLogo, Helvetica, sans-serif;/*Fonte do pc no titulo*/
+    font-size: 30pt; /*tamanho do titulo h1*/
+    color: #606060; /*cor do titulo h1*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,.6);/*sombra na borda do titulo*/
+    padding: 0px;/*zerou o espaçamento interno do titulo h1*/
+    margin-bottom: 0px;/*zerou espaço exterior interno para colar no h2*/
+}
+header#cabecalho h2{
+    font-family: "Titillium Web",sans-serif ;/*importação da web font*/
+    color: #888888;/*alteração de cor do titulo h2*/
+    font-size: 15pt;/*tamanho da fonte de titulo h2*/
+    padding: 0px;/*zerando espaçamento interno de h2*/
+    margin-top: 0px;/*zerando espaço superior externo, grudar no h1*/
+}
+/*Formatação de imagens com legendas*/
+figure.foto-legenda{/*Formatação da imagem no geral, de todo container*/
+   position: relative;/*faz com que a legenda volte para o container, dent*/
+    border: 8px solid white;/*borda da imagem*/
+    box-shadow: 1px 1px 4px black;/*sombreamento da borda*/
+    width: auto;/*ajusta a imagem na página em relação a resolução*/
+}
+figure.foto-legenda img{ /*faz com que a imagem ocupe todo container*/
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption{ /*formatação da legenda da imagem*/
+    position: absolute;/*deixa a legenda solta na página, fora do containe*/
+    top: 0;/*sobe a legenda para parte superior*/
+    background-color: rgba(0, 0, 0,.4);/*cria uma caixa transparante preta*/
+    color: white;/*altera a cor da legenda da imagem*/
+    width: 100%;/*aumenta a largura da caixa transparante cobrindo tudo*/
+    height: 100%;/*aumenta a altura da caixa transparante cobrindo tudo*/
+    padding: 10px;/*faz com que a letra"desencoste" da borda da imagem*/
+    box-sizing: border-box;/*borda ultrapassando?? box-sizing para resolve*/
+    opacity: 0;/*faz sumir toda legenda com caixa transparante*/
+    transition: 1s;/*demorará 1 segundo para aparecer por completo*/
+}
+figure.foto-legenda:hover figcaption{/*efeito para aparecer toda legenda  com caixa transparante*/
+    opacity: 1;
+}
+
+
+/*formatação do section (corpo da pagina)*/
+section#corpo{ 
+    display: block; /*faz com que o corpo vire um bloco*/
+    width: 500px;/*largura do corpo*/
+    float: left;/*faz o corpo flutuar para ca <*/
+    border-right: 1px solid #606060;/*deixa uma borda no meio da pagina*/
+    padding-right: 15px;/*aumenta o espaço do corpo, distanciando borda*/
+}
+article#noticia-principal h2{/*formatação h2 do artigo princiapl*/
+    font-size: 13pt;/*tamanho dos h2*/
+    color: #606060;/*cor da letra dos h2*/
+    background-color: #dddddd;/*cor de fundos do h2*/
+    padding: 5px 0px 5px 10px;/*cima,direita,baixo,esquerda<*/
+    margin: 10px 0px 10px 0px;/*cima,direita,baixo,esquerda<*/
+}
+header#cabecalho-artigo h1{
+    font-family: "FonteLogo",sans-serif;/*importanta do pc*/
+    font-size: 20pt;/*tamanho do titulo h1*/
+    color: #606060;/*cor do titulo*/
+    margin-bottom: 0px;/*zerando margem inferior para colar no h2*/
+    margin-top: 0px; /*zerando margin superior para subir mais o titulo*/
+}
+.direita{/*formatação do h3 com class "direita"*/
+    text-align: right;/*mover o h3 para la >*/
+}
+header#cabecalho-artigo h3{
+    font-size: 12px;/*tamanho do h3*/
+    color: #606060;/*cor do titulo h2*/
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;/*tamanho dos h2 do artigo*/
+    color: #cecece;/*cor dos h2*/
+    background-color: #ffffff;/*cor de fundo dos h2 do cabecalho artigo*/
+    margin: 0px;/*zerando todas as margin do h2 do cabecalho artigo*/
+}
+
+
+/*formatação do aside da pagina lateral*/
+aside#lateral{/*formatação lateral geral*/
+    display: block;/*transforma a lateral em um bloco*/
+    float: right; /*para flutuar a direita da pagina >*/
+    width: 350px;/*largura da lateral para caber certo*/
+    background-color: #dddddd; /*cria uma caixa transparante de fundo */
+    padding: 10px;/*aumenta o espaçamento interno*/
+    margin-top: 10px;/*aumenta espaço externo desencostando da borda super*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);/*cria uma borda sombra*/
+}
+aside#lateral h1{/*formatação dos h1 da lateral*/
+    font-family: "FonteLogo",sans-serif;/*fonte importada do pc*/
+    font-size: 20pt;/*tamanho da fonte do h1*/
+    color: #606060;/*cor dos h1 da lateral*/
+    margin-top: 0px;/*faz com o h1 encoste na parte superior*/
+}
+aside#lateral h2{
+    background-color: #606060;/*altera a cor de fundo dos h2*/
+    font-size: 13pt;/*muda o tamanho da fonte dos h2*/
+    color: #ffffff;/*muda a cor da letra dos h2*/
+    padding: 5px;/*aumenta o espaço interno dos h2*/
+}
+
+/*formatação do rodape da pagina*/
+footer#rodape{
+    clear: both;/*limpa toda configuração do aside e section,*/
+    border-top: 1px solid #606060; /*Borda superior rodape*/
+}
+
+footer#rodape p{
+    text-align: center;/*paragrafo central do rodape*/
+}
+/*Formatação da tabela*/
+table#tabelaspec{/*Formatação geral da tabela*/
+    border: 1px solid #606060;/*borda geral da tabela*/
+    border-spacing: 0px;/*tira o espaçamento duplo da tabela geral*/
+    margin-left: auto;/*junto com o right centraliza a tabela na pagina*/
+    margin-right: auto;/*junto com o right centraliza a tabela na pagina*/
+}
+table#tabelaspec td{/*Formatação de cada celula da tabela. todos os table data*/
+    border: 1px solid #606060;/*borda em todos os table data td*/
+    padding: 10px;/*Aumenta espaçamento interno de cada celula*/
+    vertical-align: middle;/*alinha ao centro cada td*/
+     text-align: center;/*centraliza todo texto das celulas da tabela*/
+}
+table#tabelaspec td.ce{/*Formatação de cada celula da esquerda <*/
+    color: #ffffff;/*cor das letras dos textos da esquerda <*/
+    background-color: #606060;/*cor de fundo*/
+    vertical-align: top;/*alinhamento dos textos para o top no meio*/
+    font-weight: bold;/*deixa o tom mais fortes dos textos*/
+}
+table#tabelaspec td.cd{/*Formatação de cada celula da direita*/
+    background-color: #cecece;/*cor de fundo de cada celula da direita*/
+}
+table#tabelaspec caption{/**formatação titulo da tabela*/
+    color: #888888;/*cor do titulo da tabela*/
+    font-size: 13pt;/*tamanho do titulo da tabela*/
+    font-weight: bolder;/*tom mais forte do titulo da tabela*/
+}
+table#tabelaspec caption span{/*formatação da pequena legenda de data da tabela*/
+    display: block;/*transformando a legenda span em um bloco*/
+    float: right;/*flutuando o texto para a direita*/
+    color: #000000;/*cor do texto da data da tabela*/
+    font-size: 8pt;/*tamanho da fonte da data*/
+    margin-top: 10px;/*faz com que a data encoste na borda da tabela*/
+}
+video#filme{/*ajustamento do primeiro video da pagina principal*/
+    width: 350px;
+}
+
+
